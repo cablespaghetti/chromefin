@@ -1,0 +1,43 @@
+{
+	"all": {
+		"include": {
+			"all": [
+				"bash-color-prompt",
+				"bluefin-cli-logos",
+				"bluefin-faces",
+				"bluefin-fastfetch",
+				"bluefin-schemas",
+				"bootc",
+				"fastfetch",
+				"fish",
+				"nerd-fonts",
+				"tailscale",
+				"tmux",
+				"ublue-bling",
+				"ublue-brew",
+				"ublue-fastfetch",
+				"ublue-motd"
+			]
+		},
+		"exclude": {
+			"all": [
+				"firefox-langpacks",
+				"firefox"
+			],
+			"dx": []
+		}
+	},
+	"42": {
+		"include": {
+			"all": [
+				"google-noto-fonts-all",
+				"uupd"
+      ],
+			"dx": []
+		},
+		"exclude": {
+			"all": [],
+			"dx": []
+		}
+	}
+}
