@@ -3,6 +3,6 @@ mountpoint = "/"
 minsize = "20 GiB"
 
 [[customizations.user]]
-name = "chromefin"
-password = "chromefin"
+name = "bluebook"
+password = "bluebook"
 groups = ["wheel"]

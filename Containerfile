@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/onyx-main:41
+FROM ghcr.io/ublue-os/budgie-atomic-main:42
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
