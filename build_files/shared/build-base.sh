@@ -29,9 +29,6 @@ echo "::endgroup::"
 # Get COPR Repos
 /ctx/build_files/base/02-install-copr-repos.sh
 
-# Install Kernel and Akmods
-# /ctx/build_files/base/03-install-kernel-akmods.sh
-
 # Install Additional Packages
 /ctx/build_files/base/04-packages.sh
 
@@ -43,17 +40,8 @@ echo "::endgroup::"
 
 ## late stage changes
 
-# Make sure Bootc works
-/ctx/build_files/base/16-bootc.sh
-
 # Systemd and Remove Items
 /ctx/build_files/base/17-cleanup.sh
-
-# Run workarounds for lf (Likely not needed)
-/ctx/build_files/base/18-workarounds.sh
-
-# Regenerate initramfs
-/ctx/build_files/base/19-initramfs.sh
 
 # Clean Up
 echo "::group:: Cleanup"

@@ -71,38 +71,8 @@ sudoif command *args:
     }
     sudoif {{ command }} {{ args }}
 
-# This Justfile recipe builds a container image using Podman.
-#
-# Arguments:
-#   $target_image - The tag you want to apply to the image (default: aurora).
-#   $tag - The tag for the image (default: lts).
-#   $dx - Enable DX (default: "0").
-#   $hwe - Enable HWE (default: "0").
-#   $gdx - Enable GDX (default: "0").
-#
-# DX:
-#   Developer Experience (DX) is a feature that allows you to install the latest developer tools for your system.
-#   Packages include VScode, Docker, Distrobox, and more.
-# HWE:
-#   Hardware Enablement (HWE) is a feature that allows you to install the latest hardware support for your system.
-#   Currently this install the Hyperscale SIG kernel which will stay ahead of the CentOS Stream kernel and enables btrfs
-# GDX: https://docs.projectaurora.io/gdx/
-#   GPU Developer Experience (GDX) creates a base as an AI and Graphics platform.
-#   Installs Nvidia drivers, CUDA, and other tools.
-#
-# The script constructs the version string using the tag and the current date.
-# If the git working directory is clean, it also includes the short SHA of the current HEAD.
-#
-# just build $target_image $tag $dx $hwe $gdx
-#
-# Example usage:
-#   just build aurora lts 1 0 1
-#
-# This will build an image 'aurora:lts' with DX and GDX enabled.
-#
-
 # Build the image using the specified parameters
-build $target_image=image_name $tag=default_tag $dx="0" $hwe="0" $gdx="0":
+build $target_image=image_name $tag=default_tag:
     #!/usr/bin/env bash
 
     # Get Version
